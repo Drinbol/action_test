@@ -28,5 +28,5 @@ jobs:
           -X PATCH \
           -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github+json" \
-          https://api.github.com/user/packages/container/action_test/visibility \
+          https://api.github.com/user/packages/container/${{ github.repository_owner }}/action_test/visibility \
           -d '{"visibility":"public"}'
